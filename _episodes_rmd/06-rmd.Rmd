@@ -1,0 +1,20 @@
+---
+title: "Reports with RMarkdown or "
+teaching: 80
+exercises: 35
+questions:
+  - "Fix me"
+objectives:
+   - "Fix me"
+keypoints:
+   - "Fix me"
+source: Rmd
+---
+
+```{r, include=FALSE}
+source("../bin/chunk-options.R")
+knitr_fig_path("06-")
+source("../bin/download_data.R")
+```
+
+# Why you should write your reports using RMarkdown?
