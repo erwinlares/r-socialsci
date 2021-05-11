@@ -25,18 +25,16 @@ source("../bin/download_data.R")
 
 This lesson has been heavily influence by the Tobin Magle's presentation created for the [UW-Madison's Library Research Guides](https://researchguides.library.wisc.edu/R) entitled "Creating reproducible Research using R Markdown."
 
-# Agenda {-}
+# Agenda
 
 1.  Why should you write your reports using RMarkdown?
 2.  What is literate programming? Why is it useful?
 3.  Scenario: Using R Markdown to
-
--   Format text
--   Embed code
--   Run Analyses
--   Create Tables
--   Create Plots
-
+  -   Format text
+  -   Embed code
+  -   Run Analyses
+  -   Create Tables
+  -   Create Plots
 5.  Create your own document
 6.  Ideas to organize your document 
 7. Summary 
@@ -66,7 +64,6 @@ Human readable text + machine readable code = **reproducible** document
 ## Programs as work of literature
 
 -   Idea by Donald Knuth, Stanford University.
-
 -   A paradigm shift:
 
     -   **from** telling a computer what to do
@@ -97,55 +94,119 @@ Human readable text + machine readable code = **reproducible** document
 
 # Scenario
 
-**Setup** add \*\* Problem \*\* add \*\* Potential problems \*\*
+**SAFI** (Studying African Farmer-Led Irrigation) is a study looking at farming and irrigation methods in _Tanzania_ and _Mozambique_. The survey data was collected through interviews conducted between November 2016 and June 2017. For this lesson, we will be using a subset of the available data. For information about the full teaching dataset used in other lessons in this workshop, see the [dataset](https://datacarpentry.org/socialsci-workshop/data/) description.
 
-## Doing it the Educated Pirate Way ARG!
 
-1.  Install `markdown`, `bookdown`, `knitr` packages (script vs IDE)
-2.  Install `tinytext` for pdfs
-3.  Add to the YAML output: bookdown::pdf_document2: default
-4.  Get the data
-5.  Add some prose
-6.  Weave some code into it to create a narrative
-7.  Create a code chunk
-8.  Create a table
-9.  Create a plot
+##  Install `markdown` packages (script vs IDE)
 
 ```{r}
 
 library(markdown)
-library(bookdown)
 library(knitr)
 library(tidyverse)
-
-beds <- read_csv(url("https://go.wisc.edu/r7c12n"))
-
-beds %>% group_by(shell, stove) %>% 
-    summarize(mean = mean(hardboil))
-
-beds_long <- beds %>% 
-  pivot_longer(cols = c(hardboil, softboil ), names_to = "cooking_method", values_to = "time")
-
-beds_long %>% ggplot() +
-  geom_boxplot(aes(y = time, x = as.factor(tastiness), color = shell)) +
-  facet_grid(cooking_method~removal)
+library(gt)
 
 ```
 
-# Play with your document
+**Play with your document**
+-   Click **knit**
 
--   Click *knit*
--   Alternatively, one can use the `render()` function
+##  Get the data
+
+```{r}
+interviews_plotting <- read_csv("data/interviews_plotting.csv")
+
+#alternative way to get the dataset 
+#interviews_plotting <- read_csv(url("https://go.wisc.edu/5id64b"))
+
+glimpse(interviews_plotting)
+```
+
+##  Add some prose
+
+The **SAFI** dataset contains data related to households and agriculture in _Tanzania_ and _Mozambique._ The survey covers things like:
+
+- household features
+- agricultural practices
+- assets 
+- details about the household members
+
+**Play with your document**
+-   Click **knit**
+
+##  Weave some code into it to create a narrative
+
+Let's imagine we want write a paragraph about the population per village. Which village is the most populated? Is it _Chirodzo_, _God_, or _Ruaca_. 
+
+### Create a table
+
+```{r}
+
+interviews_plotting %>% select(village, no_membrs) %>% 
+  group_by(village) %>%
+  summarize(population = sum(no_membrs))  
+
+# %>% 
+# gt() %>% 
+# tab_header(title = md("**Studying African Farmer-Led Irrigation**"), 
+#             subtitle = md("Population _per village_"))
+
+
+
+```
+
+Of the three villages surveyed, Ruaca is the most populated with 371 people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
+
+It would be ideal that the prose would be responsive to the data we just produced! We can do that easily within our document with inline code. 
+
+First let store our results in an object, then let's access the object to get the results we want. 
+
+```{r}
+
+pop_results <- interviews_plotting %>% select(village,
+                               no_membrs) %>% 
+  group_by(village) %>% 
+  summarize(population = sum(no_membrs)) 
+
+
+```
+
+Of the three villages surveyed, `r pop_results$villlage[3]` is the most populated with `r pop_results$population[3]` people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
+
+
+
+> ## Add your own inline code
+>
+> Challenge. Modify the rest of the paragraph so that the rest of the villages and their population appear in the text. Start using the code below to ensure you have the R object `pop_result`.
+>
+> ~~~
+> pop_results <- interviews_plotting %>% select(village,
+                               no_membrs) %>% 
+                               group_by(village) %>% 
+                               summarize(population = sum(no_membrs)) 
+> ~~~
+> {: .source}
+>
+> > ## Solution
+> >
+> > Of the three villages surveyed, ~~~r pop_results$villlage[3]~~~ is the most populated with ~~~r pop_results$population[3]~~~ people. The second-most populated village is ~~~r pop_results$villlage[2]~~~ with ~~~r pop_results$population[3]~~~ people. The least populated village in the sample ~~~r pop_results$villlage[1]~~~ with ~~~r pop_results$population[1]~~~.
+> >
+> {: .solution}
+{: .challenge}
+
+###  Create a plot
+
+Imagine now that we want to get an idea of 
+
+
 
 ## What's happening behind the scenes?
 
-# Create your own RMarkdown document
+```{r set-a, echo = FALSE, fig.cap="Set A input: complete set presented first", out.width="6in", fig.pos="H", fig.align="center"}
+include_graphics("~/Desktop/dissertation/images/rmarkdownflow.png")
 
-1.  download the `hardboiledegg` dataset
+```
 
--   there is data about how long it takes to boil a egg (white shell vs brown shells), cooking method (hard vs soft), cooking method (covered vs uncovered), and gas vs electric stoves, and tastiness (1-5 scale less-more tastiness), ease of shell removal (1-5 scale easiest-hardest)
-
--   Write down a narrative in which play the role of a chef defensing how to best prepare hard boiled egg. Make you argument using data that supports your conclusion. Create a table that highlights your findings. Create an accompanying plot.
 
 # Ideas to organize your reproducible document
 
@@ -154,15 +215,11 @@ beds_long %>% ggplot() +
 -   [Check the cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
 
 # Summary
-
--   Literate programming makes reproducible research more machine readable
-
--   R markdown documents facilitate literate programming in RStudio
-
--   R markdown has 3 sections
-
-    -   Header: determines output and adds parameters
-    -   Markdown Text: can include inline code
-    -   Code chunks: can be customized to mute code or output
+- Literate programming makes reproducible research more machine readable
+- R markdown documents facilitate literate programming in RStudio
+- R markdown has 3 sections
+  -  Header: determines output and adds parameters
+  -  Markdown Text: can include inline code
+  -  Code chunks: can be customized to mute code or output
 
 # Need help?
