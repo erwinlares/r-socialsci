@@ -149,29 +149,29 @@ interviews_plotting %>% select(village, no_membrs) %>%
 
 ```
 
-**Version A: prose with results manually added**
+**Version A: prose with results manually added**  
 Of the three villages surveyed, Ruaca is the most populated with 371 people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
 
 > ## Note
-> It would be ideal that the prose would be responsive to the data we just produced! We can do that easily within our document with inline code. 
+> It would be ideal that the prose be responsive to the data we just produced! We can incorporate that into our document with inline code!
 >
 > First let's store our results in an object, then let's access the object to get the results we want. 
 {: .callout}
 
-**Version B: prose with results via inline code**
+**Version B: prose with results via inline code**  
 ```{r}
 
-pop_results <- interviews_plotting %>% select(village,
-                               no_membrs) %>% 
-  group_by(village) %>% 
+pop_results <- interviews_plotting %>% 
+  select(village,no_membrs) %>% 
+  group_by(village) %>%
   summarize(population = sum(no_membrs)) 
-
 
 ```
 
-Of the three villages surveyed, `r print(pop_results$villlage[3])` is the most populated with `r pop_results$population[3]` people.
+Of the three villages surveyed, `r pop_results$villlage[3]` is the most populated with `r pop_results$population[3]` people.
 
 The text you see in the previous sentence wasn't typed. It was extracted from the data we created using _inline code_. To get the name of the village with the most people, this code is needed `\r pop_results$villlage[3]`. To get the actual number of inhabitants, this was needed `\r pop_results$population[3]`.
+
 
 > ## Add your own inline code
 >
@@ -195,7 +195,7 @@ Imagine now that we want to get an idea of
 ## What's happening behind the scenes?
 
 ```{r set-a, echo = FALSE, fig.cap="Set A input: complete set presented first", out.width="6in", fig.pos="H", fig.align="center"}
-include_graphics("fig/rmarkdownflow.png")
+include_graphics("../fig/rmarkdownflow.png")
 
 ```
 
