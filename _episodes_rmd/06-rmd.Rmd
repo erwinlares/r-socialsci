@@ -60,7 +60,7 @@ Can we do better?
 A typical RMarkdown document has three distinct parts: 
 
   1 - an (optional) YAML header surrounded by `---`.  
-  2 - your prose (optionally) formatted using Markdown syntax and which can include `inline code`.  
+  2 - your prose (optionally) formatted using Markdown syntax. It also can include `inline code`.  
   3 - Code chunks containing your R script surrounded by 3 backticks.  
   
 ```{r, echo = FALSE, include = TRUE}
@@ -108,7 +108,7 @@ Human readable text + machine readable code = **reproducible** document
 **SAFI** (Studying African Farmer-Led Irrigation) is a study looking at farming and irrigation methods in _Tanzania_ and _Mozambique_. The survey data was collected through interviews conducted between November 2016 and June 2017. For this lesson, we will be using a subset of the available data. For information about the full teaching dataset used in other lessons in this workshop, see the [dataset](https://datacarpentry.org/socialsci-workshop/data/) description.
 
 
-##  Install `markdown` packages (script vs IDE)
+##  Install the packages you'll need
 
 ```{r, include = TRUE, echo=TRUE, message=FALSE}
 

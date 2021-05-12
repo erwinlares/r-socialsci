@@ -58,7 +58,7 @@ Can we do better?
 A typical RMarkdown document has three distinct parts: 
 
   1 - an (optional) YAML header surrounded by `---`.  
-  2 - your prose (optionally) formatted using Markdown syntax and which can include `inline code`.  
+  2 - your prose (optionally) formatted using Markdown syntax. It also can include `inline code`.  
   3 - Code chunks containing your R script surrounded by 3 backticks.  
   
 <img src="../fig/anatomy_of_a_document.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
@@ -103,7 +103,7 @@ Human readable text + machine readable code = **reproducible** document
 **SAFI** (Studying African Farmer-Led Irrigation) is a study looking at farming and irrigation methods in _Tanzania_ and _Mozambique_. The survey data was collected through interviews conducted between November 2016 and June 2017. For this lesson, we will be using a subset of the available data. For information about the full teaching dataset used in other lessons in this workshop, see the [dataset](https://datacarpentry.org/socialsci-workshop/data/) description.
 
 
-##  Install `markdown` packages (script vs IDE)
+##  Install the packages you'll need
 
 
 ~~~
@@ -180,12 +180,12 @@ interviews_plotting %>% select(village, no_membrs) %>%
 ~~~
 {: .language-r}
 
-<!--html_preserve--><div id="aovltzzpou" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<!--html_preserve--><div id="rbatnhjdab" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#aovltzzpou .gt_table {
+#rbatnhjdab .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -210,7 +210,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-left-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_heading {
+#rbatnhjdab .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -222,7 +222,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_title {
+#rbatnhjdab .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -232,7 +232,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-width: 0;
 }
 
-#aovltzzpou .gt_subtitle {
+#rbatnhjdab .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -242,13 +242,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-width: 0;
 }
 
-#aovltzzpou .gt_bottom_border {
+#rbatnhjdab .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_col_headings {
+#rbatnhjdab .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -263,7 +263,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_col_heading {
+#rbatnhjdab .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -283,7 +283,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#aovltzzpou .gt_column_spanner_outer {
+#rbatnhjdab .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -295,15 +295,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 4px;
 }
 
-#aovltzzpou .gt_column_spanner_outer:first-child {
+#rbatnhjdab .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aovltzzpou .gt_column_spanner_outer:last-child {
+#rbatnhjdab .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aovltzzpou .gt_column_spanner {
+#rbatnhjdab .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -315,7 +315,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   width: 100%;
 }
 
-#aovltzzpou .gt_group_heading {
+#rbatnhjdab .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -337,7 +337,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#aovltzzpou .gt_empty_group_heading {
+#rbatnhjdab .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -352,15 +352,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#aovltzzpou .gt_from_md > :first-child {
+#rbatnhjdab .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aovltzzpou .gt_from_md > :last-child {
+#rbatnhjdab .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aovltzzpou .gt_row {
+#rbatnhjdab .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -379,7 +379,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#aovltzzpou .gt_stub {
+#rbatnhjdab .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -391,7 +391,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-left: 12px;
 }
 
-#aovltzzpou .gt_summary_row {
+#rbatnhjdab .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -401,7 +401,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#aovltzzpou .gt_first_summary_row {
+#rbatnhjdab .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -411,7 +411,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_grand_summary_row {
+#rbatnhjdab .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -421,7 +421,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#aovltzzpou .gt_first_grand_summary_row {
+#rbatnhjdab .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -431,11 +431,11 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_striped {
+#rbatnhjdab .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aovltzzpou .gt_table_body {
+#rbatnhjdab .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -444,7 +444,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_footnotes {
+#rbatnhjdab .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -458,13 +458,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_footnote {
+#rbatnhjdab .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#aovltzzpou .gt_sourcenotes {
+#rbatnhjdab .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -478,41 +478,41 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#aovltzzpou .gt_sourcenote {
+#rbatnhjdab .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#aovltzzpou .gt_left {
+#rbatnhjdab .gt_left {
   text-align: left;
 }
 
-#aovltzzpou .gt_center {
+#rbatnhjdab .gt_center {
   text-align: center;
 }
 
-#aovltzzpou .gt_right {
+#rbatnhjdab .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aovltzzpou .gt_font_normal {
+#rbatnhjdab .gt_font_normal {
   font-weight: normal;
 }
 
-#aovltzzpou .gt_font_bold {
+#rbatnhjdab .gt_font_bold {
   font-weight: bold;
 }
 
-#aovltzzpou .gt_font_italic {
+#rbatnhjdab .gt_font_italic {
   font-style: italic;
 }
 
-#aovltzzpou .gt_super {
+#rbatnhjdab .gt_super {
   font-size: 65%;
 }
 
-#aovltzzpou .gt_footnote_marks {
+#rbatnhjdab .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
