@@ -161,6 +161,20 @@ It would be ideal that the prose would be responsive to the data we just produce
 
 First let store our results in an object, then let's access the object to get the results we want. 
 
+```{r}
+
+pop_results <- interviews_plotting %>% select(village,
+                               no_membrs) %>% 
+  group_by(village) %>% 
+  summarize(population = sum(no_membrs)) 
+
+
+```
+
+Of the three villages surveyed, `r pop_results$villlage[3]` is the most populated with `r pop_results$population[3]` people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
+
+
+
 
 
 ###  Create a plot
