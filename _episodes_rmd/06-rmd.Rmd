@@ -99,7 +99,7 @@ Human readable text + machine readable code = **reproducible** document
 
 ##  Install `markdown` packages (script vs IDE)
 
-```{r}
+```{r, include = FALSE, echo=FALSE}
 
 library(markdown)
 library(knitr)
@@ -160,20 +160,6 @@ Of the three villages surveyed, Ruaca is the most populated with 371 people. The
 It would be ideal that the prose would be responsive to the data we just produced! We can do that easily within our document with inline code. 
 
 First let store our results in an object, then let's access the object to get the results we want. 
-
-```{r}
-
-pop_results <- interviews_plotting %>% select(village,
-                               no_membrs) %>% 
-  group_by(village) %>% 
-  summarize(population = sum(no_membrs)) 
-
-
-```
-
-Of the three villages surveyed, `r pop_results$villlage[3]` is the most populated with `r pop_results$population[3]` people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
-
-
 
 
 
