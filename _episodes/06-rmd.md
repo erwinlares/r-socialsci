@@ -99,28 +99,12 @@ Human readable text + machine readable code = **reproducible** document
 
 
 ~~~
-── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
+library(markdown)
+library(knitr)
+library(tidyverse)
+library(gt)
 ~~~
-{: .output}
-
-
-
-~~~
-✔ ggplot2 3.3.3     ✔ purrr   0.3.4
-✔ tibble  3.1.1     ✔ dplyr   1.0.6
-✔ tidyr   1.1.3     ✔ stringr 1.4.0
-✔ readr   1.4.0     ✔ forcats 0.5.1
-~~~
-{: .output}
-
-
-
-~~~
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-~~~
-{: .output}
+{: .language-r}
 
 **Play with your document**
 -   Click **knit**
@@ -129,28 +113,11 @@ Human readable text + machine readable code = **reproducible** document
 
 
 ~~~
+interviews_plotting <- read_csv(url("https://go.wisc.edu/5id64b"))
 
-── Column specification ────────────────────────────────────────────────────────
-cols(
-  .default = col_logical(),
-  key_ID = col_double(),
-  village = col_character(),
-  interview_date = col_datetime(format = ""),
-  no_membrs = col_double(),
-  years_liv = col_double(),
-  respondent_wall_type = col_character(),
-  rooms = col_double(),
-  memb_assoc = col_character(),
-  affect_conflicts = col_character(),
-  liv_count = col_double(),
-  no_meals = col_double(),
-  instanceID = col_character(),
-  number_months_lack_food = col_double(),
-  number_items = col_double()
-)
-ℹ Use `spec()` for the full column specifications.
+head(interviews_plotting)
 ~~~
-{: .output}
+{: .language-r}
 
 
 
@@ -185,7 +152,7 @@ The **SAFI** dataset contains data related to households and agriculture in _Tan
 - assets 
 - details about the household members
 
-**Play with your document**
+**Play with your document!!!**
 -   Click **knit**
 
 ##  Weave some code into it to create a narrative
@@ -209,7 +176,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#apdntklquv .gt_table {
+#xqevzddhxa .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -234,7 +201,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-left-color: #D3D3D3;
 }
 
-#apdntklquv .gt_heading {
+#xqevzddhxa .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -246,7 +213,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#apdntklquv .gt_title {
+#xqevzddhxa .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -256,7 +223,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-width: 0;
 }
 
-#apdntklquv .gt_subtitle {
+#xqevzddhxa .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -266,13 +233,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-width: 0;
 }
 
-#apdntklquv .gt_bottom_border {
+#xqevzddhxa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#apdntklquv .gt_col_headings {
+#xqevzddhxa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -287,7 +254,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#apdntklquv .gt_col_heading {
+#xqevzddhxa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -307,7 +274,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#apdntklquv .gt_column_spanner_outer {
+#xqevzddhxa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -319,15 +286,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 4px;
 }
 
-#apdntklquv .gt_column_spanner_outer:first-child {
+#xqevzddhxa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#apdntklquv .gt_column_spanner_outer:last-child {
+#xqevzddhxa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#apdntklquv .gt_column_spanner {
+#xqevzddhxa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -339,7 +306,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   width: 100%;
 }
 
-#apdntklquv .gt_group_heading {
+#xqevzddhxa .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -361,7 +328,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#apdntklquv .gt_empty_group_heading {
+#xqevzddhxa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -376,15 +343,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#apdntklquv .gt_from_md > :first-child {
+#xqevzddhxa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#apdntklquv .gt_from_md > :last-child {
+#xqevzddhxa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#apdntklquv .gt_row {
+#xqevzddhxa .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -403,7 +370,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#apdntklquv .gt_stub {
+#xqevzddhxa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -415,7 +382,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-left: 12px;
 }
 
-#apdntklquv .gt_summary_row {
+#xqevzddhxa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -425,7 +392,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#apdntklquv .gt_first_summary_row {
+#xqevzddhxa .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -435,7 +402,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#apdntklquv .gt_grand_summary_row {
+#xqevzddhxa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -445,7 +412,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#apdntklquv .gt_first_grand_summary_row {
+#xqevzddhxa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -455,11 +422,11 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#apdntklquv .gt_striped {
+#xqevzddhxa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#apdntklquv .gt_table_body {
+#xqevzddhxa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -468,7 +435,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-color: #D3D3D3;
 }
 
-#apdntklquv .gt_footnotes {
+#xqevzddhxa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -482,13 +449,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#apdntklquv .gt_footnote {
+#xqevzddhxa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#apdntklquv .gt_sourcenotes {
+#xqevzddhxa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -502,46 +469,46 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#apdntklquv .gt_sourcenote {
+#xqevzddhxa .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#apdntklquv .gt_left {
+#xqevzddhxa .gt_left {
   text-align: left;
 }
 
-#apdntklquv .gt_center {
+#xqevzddhxa .gt_center {
   text-align: center;
 }
 
-#apdntklquv .gt_right {
+#xqevzddhxa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#apdntklquv .gt_font_normal {
+#xqevzddhxa .gt_font_normal {
   font-weight: normal;
 }
 
-#apdntklquv .gt_font_bold {
+#xqevzddhxa .gt_font_bold {
   font-weight: bold;
 }
 
-#apdntklquv .gt_font_italic {
+#xqevzddhxa .gt_font_italic {
   font-style: italic;
 }
 
-#apdntklquv .gt_super {
+#xqevzddhxa .gt_super {
   font-size: 65%;
 }
 
-#apdntklquv .gt_footnote_marks {
+#xqevzddhxa .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="apdntklquv" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="xqevzddhxa" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="2" class="gt_heading gt_title gt_font_normal" style><strong>Studying African Farmer-Led Irrigation</strong></th>
@@ -574,15 +541,16 @@ interviews_plotting %>% select(village, no_membrs) %>%
   
 </table></div><!--/html_preserve-->
 
-**Version A: manually created the document**
+**Version A: prose with results manually added**
 Of the three villages surveyed, Ruaca is the most populated with 371 people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
 
 > ## Note
 > It would be ideal that the prose would be responsive to the data we just produced! We can do that easily within our document with inline code. 
 >
-> First let store our results in an object, then let's access the object to get the results we want. 
+> First let's store our results in an object, then let's access the object to get the results we want. 
 {: .callout}
 
+**Version B: prose with results via inline code**
 
 ~~~
 pop_results <- interviews_plotting %>% select(village,
