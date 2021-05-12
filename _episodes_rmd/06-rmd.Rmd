@@ -175,24 +175,7 @@ Of the three villages surveyed, `r pop_results$villlage[3]` is the most populate
 
 
 
-> ## Add your own inline code
->
-> Challenge. Modify the rest of the paragraph so that the rest of the villages and their population appear in the text. Start using the code below to ensure you have the R object `pop_result`.
->
-> ~~~
-> pop_results <- interviews_plotting %>% select(village,
-                               no_membrs) %>% 
-                               group_by(village) %>% 
-                               summarize(population = sum(no_membrs)) 
-> ~~~
-> {: .source}
->
-> > ## Solution
-> >
-> > Of the three villages surveyed, ~~~r pop_results$villlage[3]~~~ is the most populated with ~~~r pop_results$population[3]~~~ people. The second-most populated village is ~~~r pop_results$villlage[2]~~~ with ~~~r pop_results$population[3]~~~ people. The least populated village in the sample ~~~r pop_results$villlage[1]~~~ with ~~~r pop_results$population[1]~~~.
-> >
-> {: .solution}
-{: .challenge}
+
 
 ###  Create a plot
 
