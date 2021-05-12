@@ -178,12 +178,12 @@ interviews_plotting %>% select(village, no_membrs) %>%
 ~~~
 {: .language-r}
 
-<!--html_preserve--><div id="ykhbkxrrge" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<!--html_preserve--><div id="dpxhthcboa" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ykhbkxrrge .gt_table {
+#dpxhthcboa .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -208,7 +208,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-left-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_heading {
+#dpxhthcboa .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -220,7 +220,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_title {
+#dpxhthcboa .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -230,7 +230,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-width: 0;
 }
 
-#ykhbkxrrge .gt_subtitle {
+#dpxhthcboa .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -240,13 +240,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-width: 0;
 }
 
-#ykhbkxrrge .gt_bottom_border {
+#dpxhthcboa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_col_headings {
+#dpxhthcboa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -261,7 +261,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_col_heading {
+#dpxhthcboa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -281,7 +281,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#ykhbkxrrge .gt_column_spanner_outer {
+#dpxhthcboa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -293,15 +293,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 4px;
 }
 
-#ykhbkxrrge .gt_column_spanner_outer:first-child {
+#dpxhthcboa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ykhbkxrrge .gt_column_spanner_outer:last-child {
+#dpxhthcboa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ykhbkxrrge .gt_column_spanner {
+#dpxhthcboa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -313,7 +313,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   width: 100%;
 }
 
-#ykhbkxrrge .gt_group_heading {
+#dpxhthcboa .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -335,7 +335,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#ykhbkxrrge .gt_empty_group_heading {
+#dpxhthcboa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -350,15 +350,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#ykhbkxrrge .gt_from_md > :first-child {
+#dpxhthcboa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ykhbkxrrge .gt_from_md > :last-child {
+#dpxhthcboa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ykhbkxrrge .gt_row {
+#dpxhthcboa .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -377,7 +377,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#ykhbkxrrge .gt_stub {
+#dpxhthcboa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -389,7 +389,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-left: 12px;
 }
 
-#ykhbkxrrge .gt_summary_row {
+#dpxhthcboa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -399,7 +399,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#ykhbkxrrge .gt_first_summary_row {
+#dpxhthcboa .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -409,7 +409,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_grand_summary_row {
+#dpxhthcboa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -419,7 +419,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#ykhbkxrrge .gt_first_grand_summary_row {
+#dpxhthcboa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -429,11 +429,11 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_striped {
+#dpxhthcboa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ykhbkxrrge .gt_table_body {
+#dpxhthcboa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -442,7 +442,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_footnotes {
+#dpxhthcboa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -456,13 +456,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_footnote {
+#dpxhthcboa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ykhbkxrrge .gt_sourcenotes {
+#dpxhthcboa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -476,41 +476,41 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#ykhbkxrrge .gt_sourcenote {
+#dpxhthcboa .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ykhbkxrrge .gt_left {
+#dpxhthcboa .gt_left {
   text-align: left;
 }
 
-#ykhbkxrrge .gt_center {
+#dpxhthcboa .gt_center {
   text-align: center;
 }
 
-#ykhbkxrrge .gt_right {
+#dpxhthcboa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ykhbkxrrge .gt_font_normal {
+#dpxhthcboa .gt_font_normal {
   font-weight: normal;
 }
 
-#ykhbkxrrge .gt_font_bold {
+#dpxhthcboa .gt_font_bold {
   font-weight: bold;
 }
 
-#ykhbkxrrge .gt_font_italic {
+#dpxhthcboa .gt_font_italic {
   font-style: italic;
 }
 
-#ykhbkxrrge .gt_super {
+#dpxhthcboa .gt_super {
   font-size: 65%;
 }
 
-#ykhbkxrrge .gt_footnote_marks {
+#dpxhthcboa .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
