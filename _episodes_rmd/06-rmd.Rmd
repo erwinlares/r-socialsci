@@ -63,7 +63,7 @@ A typical RMarkdown document has three distinct parts:
   2 - your prose (optionally) formatted using Markdown syntax and which can include `inline code`.  
   3 - Code chunks containing your R script surrounded by 3 backticks ```.  
   
-```{r set-a, echo = FALSE, include = TRUE}
+```{r set-b, echo = FALSE, include = TRUE}
 include_graphics("../fig/anatomy_of_a_document.png")
 
 ```
@@ -221,10 +221,13 @@ include_graphics("../fig/rmarkdownflow.png")
 - R markdown documents facilitate literate programming in RStudio
 - R markdown has 3 sections
   -  Header: determines output and adds parameters
-  -  Markdown Text: can include inline code
+  -  Markdown Text: it can be lightly formatted and can include inline code too! 
   -  Code chunks: can be customized to mute code or output
 
 # Need help?
 
 - [Formating basics](https://rmarkdown.rstudio.com/authoring_basics.html)
-- 
+- [Getting Started with R Markdown](https://rmarkdown.rstudio.com/index.html)
+- [R Markdown: The Definite Guide](https://bookdown.org/yihui/rmarkdown/)
+- [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+- [The Data Science Hub](https://datascience.wisc.edu/hub/)
