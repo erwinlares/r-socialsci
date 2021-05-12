@@ -206,7 +206,7 @@ interviews_plotting %>%
     group_by(village) %>%
     summarize(across(bicycle:computer, ~ sum(.x) / n() * 100)) %>% 
     pivot_longer(bicycle:computer, names_to = "items", values_to = "percent") %>% 
-    ggplot(aes(x = village, y = percent, fill = village)) +
+    ggplot(aes(x = village, y = percent)) +
     geom_bar(stat = "identity", position = "dodge") +
     facet_wrap(~ items) +
     theme_bw() +
@@ -218,6 +218,7 @@ interviews_plotting %>%
 > Challenge. Modify the code above so that the new barplots are color to reflect each village.
 >
 > > ## Solution
+> > 
 > > ```{r, include=TRUE}
 > > interviews_plotting %>% 
     group_by(village) %>%
@@ -229,8 +230,6 @@ interviews_plotting %>%
     theme_bw() +
     theme(panel.grid = element_blank(), axis.title.x = element_blank())
 > >```
-
-> >
 > {: .solution}
 {: .challenge}
 
