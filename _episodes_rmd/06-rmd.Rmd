@@ -194,7 +194,7 @@ Imagine now that we want to get an idea of
 
 ## What's happening behind the scenes?
 
-```{r set-a, echo = FALSE, fig.cap="Set A input: complete set presented first", out.width="6in", fig.pos="H", fig.align="center"}
+```{r set-a, echo = FALSE, include = TRUE}
 include_graphics("../fig/rmarkdownflow.png")
 
 ```
