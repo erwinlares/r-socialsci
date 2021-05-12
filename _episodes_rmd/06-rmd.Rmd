@@ -1,5 +1,5 @@
 ---
-title: "Reports with RMarkdown or "
+title: "Reports with RMarkdown"
 teaching: 80
 exercises: 35
 questions:
@@ -99,7 +99,7 @@ Human readable text + machine readable code = **reproducible** document
 
 ##  Install `markdown` packages (script vs IDE)
 
-```{r, include = FALSE, echo=FALSE}
+```{r, include = TRUE, echo=FALSE}
 
 library(markdown)
 library(knitr)
@@ -113,13 +113,11 @@ library(gt)
 
 ##  Get the data
 
-```{r}
-#interviews_plotting <- read_csv("data/interviews_plotting.csv")
+```{r, echo = FALSE, include=TRUE}
 
-#alternative way to get the dataset 
 interviews_plotting <- read_csv(url("https://go.wisc.edu/5id64b"))
 
-glimpse(interviews_plotting)
+head(interviews_plotting)
 ```
 
 ##  Add some prose
@@ -144,22 +142,21 @@ Let's imagine we want write a paragraph about the population per village. Which 
 
 interviews_plotting %>% select(village, no_membrs) %>% 
   group_by(village) %>%
-  summarize(population = sum(no_membrs))  
-
-# %>% 
-# gt() %>% 
-# tab_header(title = md("**Studying African Farmer-Led Irrigation**"), 
-#             subtitle = md("Population _per village_"))
-
-
+  summarize(population = sum(no_membrs))  %>%
+  gt() %>%
+  tab_header(title = md("**Studying African Farmer-Led Irrigation**"),
+            subtitle = md("Population _per village_"))
 
 ```
 
+**Version A: manually created the document**
 Of the three villages surveyed, Ruaca is the most populated with 371 people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
 
-It would be ideal that the prose would be responsive to the data we just produced! We can do that easily within our document with inline code. 
-
-First let store our results in an object, then let's access the object to get the results we want. 
+> ## Note
+> It would be ideal that the prose would be responsive to the data we just produced! > We can do that easily within our document with inline code. 
+>
+> First let store our results in an object, then let's access the object to get the >results we want. 
+{: .callout}
 
 ```{r}
 
@@ -171,10 +168,26 @@ pop_results <- interviews_plotting %>% select(village,
 
 ```
 
-Of the three villages surveyed, `r pop_results$villlage[3]` is the most populated with `r pop_results$population[3]` people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
+Of the three villages surveyed, `r pop_results$villlage[3]` is the most populated with `r pop_results$population[3]` people.
 
+The text you see in the previous sentence wasn't typed. It was extracted from the data we created using _inline code_. 
 
-
+> ## Add your own inline code
+>
+> Challenge. Modify the rest of the paragraph so that the rest of the villages and
+> their population appear in the text. Remember that the data you need the R object > is contained in the object `pop_result`.
+>
+>
+> > ## Solution
+> >
+> > Of the three villages surveyed, `r pop_results$villlage[3]` is the most
+> > populated with `r pop_results$population[3]` people. The second-most populated 
+> > village is `r pop_results$villlage[2]` with `r pop_results$population[3]` 
+> > people. The least populated village in the sample `r pop_results$villlage[1]` 
+> > with `r pop_results$population[1]`.
+> >
+> {: .solution}
+{: .challenge}
 
 
 ###  Create a plot
