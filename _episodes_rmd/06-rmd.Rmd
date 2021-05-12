@@ -57,6 +57,12 @@ Can we do better?
 
 ## Anatomy of an RMarkdown document
 
+A typical RMarkdown document has three distint parts: 
+  1 - YAML header: 
+  2 - Prose 
+  3 - Code chunks
+  
+
 # Literate programming
 
 Human readable text + machine readable code = **reproducible** document
@@ -134,7 +140,7 @@ The **SAFI** dataset contains data related to households and agriculture in _Tan
 
 ##  Weave some code into it to create a narrative
 
-Let's imagine we want write a paragraph about the population per village. Which village is the most populated? Is it _Chirodzo_, _God_, or _Ruaca_. 
+Let's imagine we want write a paragraph about the population per village. Which village is the most populated? Is it _Chirodzo_, _God_, or _Ruaca_?  
 
 ### Create a table
 
@@ -170,7 +176,7 @@ pop_results <- interviews_plotting %>%
 
 Of the three villages surveyed, `r pop_results$village[3]` is the most populated with `r pop_results$population[3]` people.
 
-The name of the village and the population total you see in the previous sentence weren't typed. They were extracted from the data we created using _inline code_. To get the name of the village with the most people, this code is needed `\r pop_results$villlage[3]`. To get the actual number of inhabitants, this was needed `\r pop_results$population[3]`.
+The name of the village and the population total you see in the previous sentence weren't typed. They were extracted from the data we created using _inline code_. To get the name of the village with the most people, this code is needed `\r pop_results$village[3]`. To get the actual number of inhabitants, this was needed `\r pop_results$population[3]`.
 
 
 > ## Add your own inline code
@@ -179,8 +185,8 @@ The name of the village and the population total you see in the previous sentenc
 >
 > > ## Solution
 > >
-> > Of the three villages surveyed, `r pop_results$villlage[3]` is the most
-populated with `r pop_results$population[3]` people. The second-most populated village is `r pop_results$villlage[2]` with `r pop_results$population[2]` people. The least populated village in the sample `r pop_results$villlage[1]` with `r pop_results$population[1]`.
+> > Of the three villages surveyed, `r pop_results$village[3]` is the most
+populated with `r pop_results$population[3]` people. The second-most populated village is `r pop_results$village[2]` with `r pop_results$population[2]` people. The least populated village in the sample `r pop_results$village[1]` with `r pop_results$population[1]`.
 > >
 > {: .solution}
 {: .challenge}
@@ -215,3 +221,6 @@ include_graphics("../fig/rmarkdownflow.png")
   -  Code chunks: can be customized to mute code or output
 
 # Need help?
+
+- [Formating basics](https://rmarkdown.rstudio.com/authoring_basics.html)
+- 
