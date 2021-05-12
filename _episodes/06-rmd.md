@@ -176,7 +176,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#yhihnritgf .gt_table {
+#fggxgfeacq .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -201,7 +201,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-left-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_heading {
+#fggxgfeacq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -213,7 +213,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_title {
+#fggxgfeacq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -223,7 +223,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-width: 0;
 }
 
-#yhihnritgf .gt_subtitle {
+#fggxgfeacq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -233,13 +233,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-width: 0;
 }
 
-#yhihnritgf .gt_bottom_border {
+#fggxgfeacq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_col_headings {
+#fggxgfeacq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -254,7 +254,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_col_heading {
+#fggxgfeacq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -274,7 +274,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#yhihnritgf .gt_column_spanner_outer {
+#fggxgfeacq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -286,15 +286,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 4px;
 }
 
-#yhihnritgf .gt_column_spanner_outer:first-child {
+#fggxgfeacq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yhihnritgf .gt_column_spanner_outer:last-child {
+#fggxgfeacq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yhihnritgf .gt_column_spanner {
+#fggxgfeacq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -306,7 +306,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   width: 100%;
 }
 
-#yhihnritgf .gt_group_heading {
+#fggxgfeacq .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -328,7 +328,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#yhihnritgf .gt_empty_group_heading {
+#fggxgfeacq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -343,15 +343,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#yhihnritgf .gt_from_md > :first-child {
+#fggxgfeacq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yhihnritgf .gt_from_md > :last-child {
+#fggxgfeacq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yhihnritgf .gt_row {
+#fggxgfeacq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -370,7 +370,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#yhihnritgf .gt_stub {
+#fggxgfeacq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -382,7 +382,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-left: 12px;
 }
 
-#yhihnritgf .gt_summary_row {
+#fggxgfeacq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -392,7 +392,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#yhihnritgf .gt_first_summary_row {
+#fggxgfeacq .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -402,7 +402,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_grand_summary_row {
+#fggxgfeacq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -412,7 +412,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#yhihnritgf .gt_first_grand_summary_row {
+#fggxgfeacq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -422,11 +422,11 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_striped {
+#fggxgfeacq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yhihnritgf .gt_table_body {
+#fggxgfeacq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -435,7 +435,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_footnotes {
+#fggxgfeacq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -449,13 +449,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_footnote {
+#fggxgfeacq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#yhihnritgf .gt_sourcenotes {
+#fggxgfeacq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -469,46 +469,46 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#yhihnritgf .gt_sourcenote {
+#fggxgfeacq .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#yhihnritgf .gt_left {
+#fggxgfeacq .gt_left {
   text-align: left;
 }
 
-#yhihnritgf .gt_center {
+#fggxgfeacq .gt_center {
   text-align: center;
 }
 
-#yhihnritgf .gt_right {
+#fggxgfeacq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yhihnritgf .gt_font_normal {
+#fggxgfeacq .gt_font_normal {
   font-weight: normal;
 }
 
-#yhihnritgf .gt_font_bold {
+#fggxgfeacq .gt_font_bold {
   font-weight: bold;
 }
 
-#yhihnritgf .gt_font_italic {
+#fggxgfeacq .gt_font_italic {
   font-style: italic;
 }
 
-#yhihnritgf .gt_super {
+#fggxgfeacq .gt_super {
   font-size: 65%;
 }
 
-#yhihnritgf .gt_footnote_marks {
+#fggxgfeacq .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="yhihnritgf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="fggxgfeacq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="2" class="gt_heading gt_title gt_font_normal" style><strong>Studying African Farmer-Led Irrigation</strong></th>
@@ -586,7 +586,7 @@ Imagine now that we want to get an idea of
 
 ## What's happening behind the scenes?
 
-<img src="../fig/rmarkdownflow.png" title="Set A input: complete set presented first" alt="Set A input: complete set presented first" width="6in" style="display: block; margin: auto;" />
+<img src="../fig/rmarkdownflow.png" title="plot of chunk set-a" alt="plot of chunk set-a" style="display: block; margin: auto;" />
 
 
 # Ideas to organize your reproducible document
