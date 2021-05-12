@@ -198,8 +198,41 @@ populated with `r pop_results$population[3]` people. The second-most populated v
 
 ###  Create a plot
 
-Imagine now that we want to get an idea of 
+Imagine now that we want to get an idea of we want to get an idea of the type and number of items per house hold across all three villages. We can use what we learned in the ggplot lesson to create such a plot.
 
+```{r, include=TRUE}
+
+interviews_plotting %>% 
+    group_by(village) %>%
+    summarize(across(bicycle:computer, ~ sum(.x) / n() * 100)) %>% 
+    pivot_longer(bicycle:computer, names_to = "items", values_to = "percent") %>% 
+    ggplot(aes(x = village, y = percent, fill = village)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    facet_wrap(~ items) +
+    theme_bw() +
+    theme(panel.grid = element_blank(), axis.title.x = element_blank())
+```
+
+> ## Add some color 
+>
+> Challenge. Modify the code above so that the new barplots are color to reflect each village.
+>
+> > ## Solution
+> > ```{r, include=TRUE}
+> > interviews_plotting %>% 
+    group_by(village) %>%
+    summarize(across(bicycle:computer, ~ sum(.x) / n() * 100)) %>% 
+    pivot_longer(bicycle:computer, names_to = "items", values_to = "percent") %>% 
+    ggplot(aes(x = village, y = percent, fill = village)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    facet_wrap(~ items) +
+    theme_bw() +
+    theme(panel.grid = element_blank(), axis.title.x = element_blank())
+> >```
+
+> >
+> {: .solution}
+{: .challenge}
 
 
 ## What's happening behind the scenes?
