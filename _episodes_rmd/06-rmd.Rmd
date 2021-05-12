@@ -1,0 +1,208 @@
+---
+title: "Reports with RMarkdown or "
+teaching: 80
+exercises: 35
+questions:
+  - "Why should you use RMarkdown to produce your manuscripts?"
+  - "What are the advantages of using RMarkdown vs Word or LaTeX"
+objectives:
+   - "Become familiar with RMarkdown document structure"
+   - "Use basic formating syntax"
+   - "Learn to weave prose and code together"
+keypoints:
+   - "RMarkdown document change dynamically in response to changes in the data"
+   - "RMarkdown lets you instantiate literally programming easily"
+source: Rmd
+---
+
+```{r, include=FALSE}
+source("../bin/chunk-options.R")
+knitr_fig_path("06-")
+source("../bin/download_data.R")
+```
+
+# Acknowledgments
+
+This lesson has been heavily influence by the Tobin Magle's presentation created for the [UW-Madison's Library Research Guides](https://researchguides.library.wisc.edu/R) entitled "Creating reproducible Research using R Markdown."
+
+# Agenda
+
+1.  Why should you write your reports using RMarkdown?
+2.  What is literate programming? Why is it useful?
+3.  Scenario: Using R Markdown to
+  -   Format text
+  -   Embed code
+  -   Run Analyses
+  -   Create Tables
+  -   Create Plots
+5.  Create your own document
+6.  Ideas to organize your document 
+7. Summary 
+8. Where to find help
+
+# Why you should write your reports using RMarkdown?
+
+Rather than telling you why, I'm going to show you what the usual workflow for manuscript production in my field looks like. Then I'm going to show you what it looks like now that I have switched to writing exclusively in RMarkdown.
+
+  1. collect data (interviews, recordings, corpora)
+  2. code it into some type of data (tokens, measurements, categories)
+  3. enter that into some computer software for analysis and visualizations
+  4. write the prose in word processor  
+  5. copy and paste the results from the analysis software
+  6. import plots into the word processor
+  7. changes in the data results into repeating steps 1-6
+
+Sounds familiar? 
+Can we do better?
+
+## Anatomy of an RMarkdown document
+
+# Literate programming
+
+Human readable text + machine readable code = **reproducible** document
+
+## Programs as work of literature
+
+-   Idea by Donald Knuth, Stanford University.
+-   A paradigm shift:
+
+    -   **from** telling a computer what to do
+    -   **to** telling a human what you want the computer to do
+
+[Read More](http://www.literateprogramming.com/knuthweb.pdf)
+
+## Literal Programming in Research
+
+-   Tailor reports to an audience
+-   Repeatable. Ensures reproducibility
+-   Works well with version control
+-   Works well with languages used in research.
+
+## R, RStudio and RMarkdown
+
+-   Weave your prose and code into one cohesive story
+
+    -   R
+    -   Python
+    -   Stata
+    -   SAS
+    -   LaTeX
+
+-   Produce document in many formats
+
+-   Reproducible
+
+# Scenario
+
+**SAFI** (Studying African Farmer-Led Irrigation) is a study looking at farming and irrigation methods in _Tanzania_ and _Mozambique_. The survey data was collected through interviews conducted between November 2016 and June 2017. For this lesson, we will be using a subset of the available data. For information about the full teaching dataset used in other lessons in this workshop, see the [dataset](https://datacarpentry.org/socialsci-workshop/data/) description.
+
+
+##  Install `markdown` packages (script vs IDE)
+
+```{r, include = FALSE, echo=FALSE}
+
+library(markdown)
+library(knitr)
+library(tidyverse)
+library(gt)
+
+```
+
+**Play with your document**
+-   Click **knit**
+
+##  Get the data
+
+```{r}
+#interviews_plotting <- read_csv("data/interviews_plotting.csv")
+
+#alternative way to get the dataset 
+interviews_plotting <- read_csv(url("https://go.wisc.edu/5id64b"))
+
+glimpse(interviews_plotting)
+```
+
+##  Add some prose
+
+The **SAFI** dataset contains data related to households and agriculture in _Tanzania_ and _Mozambique._ The survey covers things like:
+
+- household features
+- agricultural practices
+- assets 
+- details about the household members
+
+**Play with your document**
+-   Click **knit**
+
+##  Weave some code into it to create a narrative
+
+Let's imagine we want write a paragraph about the population per village. Which village is the most populated? Is it _Chirodzo_, _God_, or _Ruaca_. 
+
+### Create a table
+
+```{r}
+
+interviews_plotting %>% select(village, no_membrs) %>% 
+  group_by(village) %>%
+  summarize(population = sum(no_membrs))  
+
+# %>% 
+# gt() %>% 
+# tab_header(title = md("**Studying African Farmer-Led Irrigation**"), 
+#             subtitle = md("Population _per village_"))
+
+
+
+```
+
+Of the three villages surveyed, Ruaca is the most populated with 371 people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
+
+It would be ideal that the prose would be responsive to the data we just produced! We can do that easily within our document with inline code. 
+
+First let store our results in an object, then let's access the object to get the results we want. 
+
+```{r}
+
+pop_results <- interviews_plotting %>% select(village,
+                               no_membrs) %>% 
+  group_by(village) %>% 
+  summarize(population = sum(no_membrs)) 
+
+
+```
+
+Of the three villages surveyed, `r pop_results$villlage[3]` is the most populated with `r pop_results$population[3]` people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
+
+
+
+
+
+###  Create a plot
+
+Imagine now that we want to get an idea of 
+
+
+
+## What's happening behind the scenes?
+
+```{r set-a, echo = FALSE, fig.cap="Set A input: complete set presented first", out.width="6in", fig.pos="H", fig.align="center"}
+include_graphics("fig/rmarkdownflow.png")
+
+```
+
+
+# Ideas to organize your reproducible document
+
+-   Outline first, add code later
+-   Use markdown syntax to structure and format your document \# headings \*\* **foldfacing**
+-   [Check the cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+
+# Summary
+- Literate programming makes reproducible research more machine readable
+- R markdown documents facilitate literate programming in RStudio
+- R markdown has 3 sections
+  -  Header: determines output and adds parameters
+  -  Markdown Text: can include inline code
+  -  Code chunks: can be customized to mute code or output
+
+# Need help?
