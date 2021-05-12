@@ -57,12 +57,17 @@ Can we do better?
 
 ## Anatomy of an RMarkdown document
 
-A typical RMarkdown document has three distint parts: 
-  1 - YAML header: 
-  2 - Prose 
-  3 - Code chunks
-  
+A typical RMarkdown document has three distinct parts: 
 
+  1 - an (optional) YAML header surrounded by `---`.  
+  2 - your prose (optionally) formatted using Markdown syntax and which can include `inline code`.  
+  3 - Code chunks containing your R script surrounded by 3 backticks ```.  
+  
+```{r set-a, echo = FALSE, include = TRUE}
+include_graphics("../fig/anatomy_of_a_document.png")
+
+```
+  
 # Literate programming
 
 Human readable text + machine readable code = **reproducible** document
@@ -174,10 +179,9 @@ pop_results <- interviews_plotting %>%
 
 ```
 
-Of the three villages surveyed, `r pop_results$village[3]` is the most populated with `r pop_results$population[3]` people.
+Of the three villages surveyed, `r pop_results$village[3]` is the most populated with `r pop_results$population[3]` people.  
 
-The name of the village and the population total you see in the previous sentence weren't typed. They were extracted from the data we created using _inline code_. To get the name of the village with the most people, this code is needed `\r pop_results$village[3]`. To get the actual number of inhabitants, this was needed `\r pop_results$population[3]`.
-
+The name of the village and the population total you see in the previous sentence weren't typed. They were extracted from the data we created using _inline code_. To get the name of the village with the most people, this code is needed \`r pop_results\$village[3]\`. To get the actual number of inhabitants, this was needed \`r pop_results\$population[3]\`.
 
 > ## Add your own inline code
 >
