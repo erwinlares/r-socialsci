@@ -114,10 +114,10 @@ library(gt)
 ##  Get the data
 
 ```{r}
-interviews_plotting <- read_csv("data/interviews_plotting.csv")
+#interviews_plotting <- read_csv("data/interviews_plotting.csv")
 
 #alternative way to get the dataset 
-#interviews_plotting <- read_csv(url("https://go.wisc.edu/5id64b"))
+interviews_plotting <- read_csv(url("https://go.wisc.edu/5id64b"))
 
 glimpse(interviews_plotting)
 ```
@@ -172,7 +172,7 @@ Imagine now that we want to get an idea of
 ## What's happening behind the scenes?
 
 ```{r set-a, echo = FALSE, fig.cap="Set A input: complete set presented first", out.width="6in", fig.pos="H", fig.align="center"}
-include_graphics("~/Desktop/dissertation/images/rmarkdownflow.png")
+include_graphics("fig/rmarkdownflow.png")
 
 ```
 
