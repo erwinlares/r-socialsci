@@ -61,13 +61,9 @@ A typical RMarkdown document has three distinct parts:
 
   1 - an (optional) YAML header surrounded by `---`.  
   2 - your prose (optionally) formatted using Markdown syntax and which can include `inline code`.  
-  3 - Code chunks containing your R script surrounded by 3 backticks ```.  
+  3 - Code chunks containing your R script surrounded by 3 backticks.  
   
-```{r set-b, echo = FALSE, include = TRUE}
-include_graphics("../fig/anatomy_of_a_document.png")
 
-```
-  
 # Literate programming
 
 Human readable text + machine readable code = **reproducible** document
