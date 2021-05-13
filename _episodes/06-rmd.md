@@ -180,12 +180,12 @@ interviews_plotting %>% select(village, no_membrs) %>%
 ~~~
 {: .language-r}
 
-<!--html_preserve--><div id="bgrqkopvas" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<!--html_preserve--><div id="shytgowquo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bgrqkopvas .gt_table {
+#shytgowquo .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -210,7 +210,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-left-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_heading {
+#shytgowquo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -222,7 +222,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_title {
+#shytgowquo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -232,7 +232,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-width: 0;
 }
 
-#bgrqkopvas .gt_subtitle {
+#shytgowquo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -242,13 +242,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-width: 0;
 }
 
-#bgrqkopvas .gt_bottom_border {
+#shytgowquo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_col_headings {
+#shytgowquo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -263,7 +263,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_col_heading {
+#shytgowquo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -283,7 +283,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#bgrqkopvas .gt_column_spanner_outer {
+#shytgowquo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -295,15 +295,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 4px;
 }
 
-#bgrqkopvas .gt_column_spanner_outer:first-child {
+#shytgowquo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bgrqkopvas .gt_column_spanner_outer:last-child {
+#shytgowquo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bgrqkopvas .gt_column_spanner {
+#shytgowquo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -315,7 +315,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   width: 100%;
 }
 
-#bgrqkopvas .gt_group_heading {
+#shytgowquo .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -337,7 +337,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#bgrqkopvas .gt_empty_group_heading {
+#shytgowquo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -352,15 +352,15 @@ interviews_plotting %>% select(village, no_membrs) %>%
   vertical-align: middle;
 }
 
-#bgrqkopvas .gt_from_md > :first-child {
+#shytgowquo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bgrqkopvas .gt_from_md > :last-child {
+#shytgowquo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bgrqkopvas .gt_row {
+#shytgowquo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -379,7 +379,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   overflow-x: hidden;
 }
 
-#bgrqkopvas .gt_stub {
+#shytgowquo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -391,7 +391,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-left: 12px;
 }
 
-#bgrqkopvas .gt_summary_row {
+#shytgowquo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -401,7 +401,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#bgrqkopvas .gt_first_summary_row {
+#shytgowquo .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -411,7 +411,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_grand_summary_row {
+#shytgowquo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -421,7 +421,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   padding-right: 5px;
 }
 
-#bgrqkopvas .gt_first_grand_summary_row {
+#shytgowquo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -431,11 +431,11 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-top-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_striped {
+#shytgowquo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bgrqkopvas .gt_table_body {
+#shytgowquo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -444,7 +444,7 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-bottom-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_footnotes {
+#shytgowquo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -458,13 +458,13 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_footnote {
+#shytgowquo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#bgrqkopvas .gt_sourcenotes {
+#shytgowquo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -478,41 +478,41 @@ interviews_plotting %>% select(village, no_membrs) %>%
   border-right-color: #D3D3D3;
 }
 
-#bgrqkopvas .gt_sourcenote {
+#shytgowquo .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#bgrqkopvas .gt_left {
+#shytgowquo .gt_left {
   text-align: left;
 }
 
-#bgrqkopvas .gt_center {
+#shytgowquo .gt_center {
   text-align: center;
 }
 
-#bgrqkopvas .gt_right {
+#shytgowquo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bgrqkopvas .gt_font_normal {
+#shytgowquo .gt_font_normal {
   font-weight: normal;
 }
 
-#bgrqkopvas .gt_font_bold {
+#shytgowquo .gt_font_bold {
   font-weight: bold;
 }
 
-#bgrqkopvas .gt_font_italic {
+#shytgowquo .gt_font_italic {
   font-style: italic;
 }
 
-#bgrqkopvas .gt_super {
+#shytgowquo .gt_super {
   font-size: 65%;
 }
 
-#bgrqkopvas .gt_footnote_marks {
+#shytgowquo .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -550,12 +550,12 @@ interviews_plotting %>% select(village, no_membrs) %>%
 Of the three villages surveyed, Ruaca is the most populated with 371 people. The second-most populated village is God with 295 people. The least populated village in the sample is Chirodzo with 276. 
 
 > ## Note
-> It would be ideal that the prose be responsive to the data we just produced! We can incorporate that into our document with inline code!
+> It would be ideal that the prose be responsive to the data we just produced! We can incorporate that into our document with _inline code_!
 >
-> First let's store our results in an object, then let's access the object to get the results we want. 
 {: .callout}
 
 **Version B: prose with results via inline code**  
+First let's store our results in an object, then let's access the object to get the results we want. 
 
 ~~~
 pop_results <- interviews_plotting %>% 
@@ -567,8 +567,13 @@ pop_results <- interviews_plotting %>%
 
 Of the three villages surveyed, Ruaca is the most populated with 371 people.  
 
+> ## Note
+> The name of the village and the population total you see in the previous  sentence weren't typed. They were extracted from the data we created using _inline code_. With _inline code_ you can weave your prose with results that are responsible to changes in your data. 
+>
+>To get the name of the village with the most people, this code is needed &#96;r pop_results\$village[3]&#96;. To get the actual number of inhabitants, this code is needed &#96;r pop_results\$population[3]&#96;. 
+>
+{: .callout}
 
-The name of the village and the population total you see in the previous  sentence weren't typed. They were extracted from the data we created using inline code. To get the name of the village with the most people, this code is needed &#96;r pop_results\$village[3]&#96;. To get the actual number of inhabitants, this code is needed &#96;r pop_results\$population[3]&#96;.  
 
 
 > ## Add your own inline code
