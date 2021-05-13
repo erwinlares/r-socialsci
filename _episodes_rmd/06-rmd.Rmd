@@ -181,7 +181,7 @@ pop_results <- interviews_plotting %>%
 
 Of the three villages surveyed, `r pop_results$village[3]` is the most populated with `r pop_results$population[3]` people.  
 
-The name of the village and the population total you see in the previous sentence weren't typed. They were extracted from the data we created using _inline code_. To get the name of the village with the most people, this code is needed ` r pop_results\$village[3] `. To get the actual number of inhabitants, this code is needed ` r pop_results\$population[3] `.
+The name of the village and the population total you see in the previous sentence weren't typed. They were extracted from the data we created using _inline code_. To get the name of the village with the most people, this code is needed `pop_results\$village[3]`. To get the actual number of inhabitants, this code is needed `pop_results\$population[3]`.
 
 > ## Add your own inline code
 >
